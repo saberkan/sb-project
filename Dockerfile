@@ -5,4 +5,4 @@ ADD external-libs .
 
 EXPOSE 8080
 EXPOSE 8089
-ENTRYPOINT ["java","-javaagent:external-libs/jmx_prometheus_javaagent-0.12.0.jar=8089:external-libs/jmx_prometheus_javaagent-default.yaml","-jar","/app.jar"]
+ENTRYPOINT ["java","-javaagent:external-libs/jmx_prometheus_javaagent-0.12.0.jar=8089:external-libs/jmx_prometheus_javaagent-default.yaml","-jar","app.jar"]
