@@ -13,7 +13,7 @@ public class GreetingController {
 
     private static final String template = "Hello, %s!";
     private final AtomicLong counter = new AtomicLong();
-    private static String response = "";
+    private static String response;
 
     @RequestMapping("/greeting")
     public Greeting greeting(@RequestParam(value="name", defaultValue="World") String name) {
@@ -23,6 +23,7 @@ public class GreetingController {
 
     @GetMapping("/print-all-headers")
     public String getAllheaders(@RequestHeader Map<String,String> headers){
+        response = "";
         headers.forEach((key,value) ->{
             System.out.println("Header Name: "+key+" Header Value: "+value);
             response += "Header Name: "+key+" Header Value: "+value+"<br>###################################<br>";
