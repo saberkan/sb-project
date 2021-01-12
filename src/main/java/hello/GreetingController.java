@@ -11,7 +11,7 @@ import java.util.*;
 @RestController
 public class GreetingController {
 
-    private static final String template = "Hello, %s!";
+    private static final String template = "Hello v2, %s!";
     private final AtomicLong counter = new AtomicLong();
     private static String response;
 
